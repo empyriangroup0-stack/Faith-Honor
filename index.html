@@ -3,66 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faith & Honor | Moda Oversize Premium</title>
+    <title>Faith & Honor | Catálogo Oversize</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
-        header { background: #000; color: #fff; padding: 3rem 1rem; text-align: center; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; background-color: #f4f4f4; }
+        header { background: #000; color: #fff; padding: 2rem; text-align: center; }
         .container { width: 90%; max-width: 1000px; margin: auto; padding: 20px; }
-        .section-title { text-align: center; margin: 40px 0 20px; color: #333; }
-        
-        /* Catálogo */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .product-card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
-        .product-card img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; }
-        
-        /* Botones y Secciones */
-        .btn { display: inline-block; background: #25d366; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 5px; margin-top: 15px; font-weight: bold; }
-        .about, .faq { background: #fff; padding: 30px; margin-bottom: 20px; border-radius: 8px; border-left: 5px solid #000; }
-        .faq h4 { margin-bottom: 5px; color: #000; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .product-card { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .product-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 5px; }
+        .btn { display: inline-block; background: #25d366; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 10px; font-weight: bold; }
+        .about, .faq { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 8px; border-left: 5px solid #000; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Faith & Honor</h1>
-    <p>Calidad y estilo en cada prenda. Moda Oversize Premium para Maturín.</p>
+    <p>Moda Oversize Premium en Maturín</p>
 </header>
 
 <div class="container">
-    
-    <!-- Historia -->
     <section class="about">
         <h2>¿Quiénes somos?</h2>
-        <p>Faith & Honor nace en Maturín con la visión de elevar el estándar de la moda urbana. Nos especializamos en camisas oversize de tela peruana premium, seleccionadas cuidadosamente para ofrecer frescura, durabilidad y ese ajuste perfecto que nuestros clientes buscan para su día a día.</p>
+        <p>Expertos en moda urbana con tela peruana de alta durabilidad y frescura.</p>
     </section>
 
-    <h2 class="section-title">Catálogo de Caballeros</h2>
+    <h2 style="text-align:center;">Nuestro Catálogo</h2>
     <div class="product-grid">
-        <div class="product-card">
-            <img src="https://i.postimg.cc/k47L4J6C/1000858594.jpg" alt="Camisa Oversize">
-            <h3>Nike Black Edition</h3>
-            <p>Precio: $15 | <b>Tu ganancia: $3</b></p>
-            <a href="https://wa.me/TU_NUMERO_AQUI" class="btn">¡Quiero venderlo!</a>
-        </div>
-        <!-- Puedes copiar el bloque de arriba para añadir más camisas -->
+        <!-- Lista de 16 modelos -->
+        <script>
+            const num = "584120000000"; // <--- CAMBIA ESTO POR TU NÚMERO
+            const links = [
+                "https://i.postimg.cc/nMqSVr9w/1000812563.jpg", "https://i.postimg.cc/QVcYNCKP/1000812564.jpg",
+                "https://i.postimg.cc/rKcnDT59/1000812565.jpg", "https://i.postimg.cc/JtjY70Hv/1000812566.jpg",
+                "https://i.postimg.cc/HVHZrmb3/1000816265.jpg", "https://i.postimg.cc/Vd1GJwX7/1000816282.jpg",
+                "https://i.postimg.cc/7fDs54St/1000816289.jpg", "https://i.postimg.cc/xcYxXQLx/1000816290.jpg",
+                "https://i.postimg.cc/bs8CZP1B/1000816291.jpg", "https://i.postimg.cc/1fPC8SDT/1000816295.jpg",
+                "https://i.postimg.cc/F7mWYv02/1000816296.jpg", "https://i.postimg.cc/4mZLYGpj/1000816297.jpg",
+                "https://i.postimg.cc/mtRXP47J/1000849619.jpg", "https://i.postimg.cc/1fPC8SpQ/1000849620.jpg",
+                "https://i.postimg.cc/jLKgDTzr/1000849621.jpg", "https://i.postimg.cc/xcYxXQKY/1000849622.jpg"
+            ];
+            links.forEach((link, i) => {
+                document.write(`<div class="product-card">
+                    <img src="${link}">
+                    <h3>Modelo ${i+1}</h3>
+                    <p>Precio: $15 | Gana: $3</p>
+                    <a href="https://wa.me/${num}" class="btn">¡Quiero venderlo!</a>
+                </div>`);
+            });
+        </script>
     </div>
 
-    <!-- FAQ -->
-    <h2 class="section-title">Preguntas Frecuentes</h2>
     <section class="faq">
-        <h4>¿Cómo recibo mi comisión?</h4>
-        <p>Tu comisión de $3 por pieza se liquida inmediatamente al cerrar la venta con el cliente.</p>
-        <h4>¿Debo tener stock en casa?</h4>
-        <p>¡No! Trabajamos con inventario rotativo. Tú promocionas, nos consultas disponibilidad y nosotros gestionamos la entrega.</p>
-        <h4>¿Qué calidad es la tela?</h4>
-        <p>Usamos tela peruana premium. Es fresca, no se deforma y tiene alta durabilidad, perfecta para el clima cálido.</p>
+        <h2>Preguntas Frecuentes</h2>
+        <p><b>¿Ganancia?</b> $3 por camisa vendida. <br>
+        <b>¿Tela?</b> Peruana premium, ideal para el clima de Maturín. <br>
+        <b>¿Stock?</b> Consultar disponibilidad antes de cerrar.</p>
     </section>
-
 </div>
-
-<footer style="text-align: center; padding: 40px; background: #333; color: #fff;">
-    <p>© 2026 Faith & Honor - Tu aliado en ventas</p>
-</footer>
 
 </body>
 </html>
