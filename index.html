@@ -2,70 +2,57 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Faith & Honor | Premium Oversize</title>
+    <title>Faith & Honor | Colección Caballero</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; margin: 0; }
+        .hero-section { text-align: center; padding: 80px 20px; border-bottom: 1px solid #333; }
+        .hero-section h1 { font-size: 3rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
         
-        /* Header minimalista */
-        nav { padding: 40px; text-align: center; text-transform: uppercase; letter-spacing: 4px; font-weight: 700; font-size: 1.5rem; }
+        .section-header { text-align: center; padding: 40px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 5px; color: #888; }
         
-        /* Banner */
-        .hero { text-align: center; padding: 60px 20px; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 10px; max-width: 1400px; margin: auto; padding: 20px; }
+        .product { background: #0a0a0a; border: 1px solid #1a1a1a; padding: 20px; text-align: center; transition: 0.4s; }
+        .product:hover { border-color: #fff; }
+        .product img { width: 100%; height: 450px; object-fit: contain; cursor: pointer; }
         
-        /* Grid de productos */
-        .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; padding: 20px; max-width: 1200px; margin: auto; }
-        .item { background: #111; padding: 20px; transition: 0.3s; border: 1px solid #222; }
-        .item:hover { border: 1px solid #fff; }
-        .item img { width: 100%; height: 400px; object-fit: contain; background: #000; }
-        
-        /* Botones estilo marca deportiva */
-        .btn { display: block; background: #fff; color: #000; text-align: center; padding: 15px; text-decoration: none; font-weight: 700; margin-top: 15px; text-transform: uppercase; }
-        .btn:hover { background: #ccc; }
-        
-        footer { padding: 80px; text-align: center; color: #555; font-size: 0.8rem; }
+        .btn-vender { display: block; background: #fff; color: #000; padding: 15px; text-decoration: none; font-weight: bold; margin-top: 20px; text-transform: uppercase; }
+        .btn-vender:hover { background: #ccc; }
     </style>
 </head>
 <body>
 
-<nav>Faith & Honor</nav>
-
-<div class="hero">
-    <h1>URBAN ESSENTIALS</h1>
-    <p>Calidad peruana. Corte Premium. Estilo de vida.</p>
+<div class="hero-section">
+    <h1>Faith & Honor</h1>
+    <p>Premium Urban Wear</p>
 </div>
 
-<div class="catalog" id="app">
-    <!-- El código generará los productos aquí -->
-</div>
+<div class="section-header">Colección Caballero: Oversize Edition</div>
 
-<footer id="contacto">
-    <p>DISTRIBUCIÓN EXCLUSIVA MATURÍN</p>
-    <p>¿LISTO PARA VENDER? CONTÁCTANOS EN WHATSAPP</p>
-</footer>
+<div class="gallery" id="men-section">
+    <!-- Aquí aparecerán tus fotos -->
+</div>
 
 <script>
-    const num = "584120000000"; // <--- TU NÚMERO AQUÍ
-    const links = [
-        "https://i.postimg.cc/nMqSVr9w/1000812563.jpg", "https://i.postimg.cc/QVcYNCKP/1000812564.jpg",
-        "https://i.postimg.cc/rKcnDT59/1000812565.jpg", "https://i.postimg.cc/JtjY70Hv/1000812566.jpg",
-        "https://i.postimg.cc/HVHZrmb3/1000816265.jpg", "https://i.postimg.cc/Vd1GJwX7/1000816282.jpg",
-        "https://i.postimg.cc/7fDs54St/1000816289.jpg", "https://i.postimg.cc/xcYxXQLx/1000816290.jpg",
-        "https://i.postimg.cc/bs8CZP1B/1000816291.jpg", "https://i.postimg.cc/1fPC8SDT/1000816295.jpg",
-        "https://i.postimg.cc/F7mWYv02/1000816296.jpg", "https://i.postimg.cc/4mZLYGpj/1000816297.jpg",
-        "https://i.postimg.cc/mtRXP47J/1000849619.jpg", "https://i.postimg.cc/1fPC8SpQ/1000849620.jpg",
-        "https://i.postimg.cc/jLKgDTzr/1000849621.jpg", "https://i.postimg.cc/xcYxXQKY/1000849622.jpg"
+    const num = "584120000000"; // CAMBIA TU NÚMERO AQUÍ
+    const fotos = [
+        {img: "https://i.postimg.cc/nMqSVr9w/1000812563.jpg", nombre: "Kobe Edition"},
+        {img: "https://i.postimg.cc/QVcYNCKP/1000812564.jpg", nombre: "LeBron Impact"},
+        {img: "https://i.postimg.cc/rKcnDT59/1000812565.jpg", nombre: "Nike Box Air"},
+        {img: "https://i.postimg.cc/JtjY70Hv/1000812566.jpg", nombre: "Kings Gold Edition"},
+        {img: "https://i.postimg.cc/jLKgDTzr/1000849621.jpg", nombre: "Urban Gradient"},
+        {img: "https://i.postimg.cc/xcYxXQKY/1000849622.jpg", nombre: "Who Loves You"},
+        {img: "https://i.postimg.cc/1fPC8SpQ/1000849620.jpg", nombre: "LeBron Vintage"},
+        {img: "https://i.postimg.cc/mtRXP47J/1000849619.jpg", nombre: "Classic Navy"}
     ];
-    
-    const container = document.getElementById('app');
-    links.forEach((link, i) => {
-        container.innerHTML += `
-            <div class="item">
-                <img src="${link}" alt="Camisa">
-                <h3 style="margin-top:20px;">MODELO ${i+1}</h3>
-                <p style="color:#888;">Precio: $15 | Tu comisión: $3</p>
-                <a href="https://wa.me/${num}?text=Hola,%20quiero%20vender%20el%20Modelo%20${i+1}" class="btn">Comenzar Venta</a>
+
+    const galeria = document.getElementById('men-section');
+    fotos.forEach(p => {
+        galeria.innerHTML += `
+            <div class="product">
+                <img src="${p.img}" alt="${p.nombre}">
+                <h3 style="margin-top:20px;">${p.nombre}</h3>
+                <p style="color:#666;">Tela Peruana Premium</p>
+                <a href="https://wa.me/${num}?text=Hola, quiero información del modelo ${p.nombre}" class="btn-vender">Consultar / Vender</a>
             </div>
         `;
     });
