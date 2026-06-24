@@ -2,75 +2,74 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faith & Honor | Catálogo Oversize</title>
+    <title>Faith & Honor | Premium Oversize</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; background-color: #f4f4f4; color: #333; }
-        header { background: #000; color: #fff; padding: 2rem; text-align: center; }
-        .container { width: 90%; max-width: 1000px; margin: auto; padding: 20px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-        .product-card { background: #fff; padding: 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; margin: 0; padding: 0; }
         
-        /* CORRECCIÓN DE NITIDEZ AQUÍ */
-        .product-card img { 
-            width: 100%; 
-            height: 250px; 
-            object-fit: contain; /* Esto evita que se vea borrosa o cortada */
-            background-color: #fff; 
-            border-radius: 8px; 
-            margin-bottom: 10px;
-        }
+        /* Header minimalista */
+        nav { padding: 40px; text-align: center; text-transform: uppercase; letter-spacing: 4px; font-weight: 700; font-size: 1.5rem; }
         
-        .btn { display: inline-block; background: #25d366; color: #fff; padding: 12px 20px; text-decoration: none; border-radius: 5px; margin-top: 10px; font-weight: bold; transition: background 0.3s; }
-        .btn:hover { background: #128c7e; }
-        .about, .faq { background: #fff; padding: 25px; margin-bottom: 20px; border-radius: 12px; border-left: 5px solid #000; }
+        /* Banner */
+        .hero { text-align: center; padding: 60px 20px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        
+        /* Grid de productos */
+        .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; padding: 20px; max-width: 1200px; margin: auto; }
+        .item { background: #111; padding: 20px; transition: 0.3s; border: 1px solid #222; }
+        .item:hover { border: 1px solid #fff; }
+        .item img { width: 100%; height: 400px; object-fit: contain; background: #000; }
+        
+        /* Botones estilo marca deportiva */
+        .btn { display: block; background: #fff; color: #000; text-align: center; padding: 15px; text-decoration: none; font-weight: 700; margin-top: 15px; text-transform: uppercase; }
+        .btn:hover { background: #ccc; }
+        
+        footer { padding: 80px; text-align: center; color: #555; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Faith & Honor</h1>
-    <p>Moda Oversize Premium en Maturín</p>
-</header>
+<nav>Faith & Honor</nav>
 
-<div class="container">
-    <section class="about">
-        <h2>¿Quiénes somos?</h2>
-        <p>Expertos en moda urbana con tela peruana de alta durabilidad y frescura. Llevamos estilo de calidad a cada rincón de Maturín.</p>
-    </section>
-
-    <h2 style="text-align:center;">Nuestro Catálogo</h2>
-    <div class="product-grid">
-        <script>
-            const num = "584120000000"; // <--- RECUERDA CAMBIAR ESTO POR TU NÚMERO
-            const links = [
-                "https://i.postimg.cc/nMqSVr9w/1000812563.jpg", "https://i.postimg.cc/QVcYNCKP/1000812564.jpg",
-                "https://i.postimg.cc/rKcnDT59/1000812565.jpg", "https://i.postimg.cc/JtjY70Hv/1000812566.jpg",
-                "https://i.postimg.cc/HVHZrmb3/1000816265.jpg", "https://i.postimg.cc/Vd1GJwX7/1000816282.jpg",
-                "https://i.postimg.cc/7fDs54St/1000816289.jpg", "https://i.postimg.cc/xcYxXQLx/1000816290.jpg",
-                "https://i.postimg.cc/bs8CZP1B/1000816291.jpg", "https://i.postimg.cc/1fPC8SDT/1000816295.jpg",
-                "https://i.postimg.cc/F7mWYv02/1000816296.jpg", "https://i.postimg.cc/4mZLYGpj/1000816297.jpg",
-                "https://i.postimg.cc/mtRXP47J/1000849619.jpg", "https://i.postimg.cc/1fPC8SpQ/1000849620.jpg",
-                "https://i.postimg.cc/jLKgDTzr/1000849621.jpg", "https://i.postimg.cc/xcYxXQKY/1000849622.jpg"
-            ];
-            links.forEach((link, i) => {
-                document.write(`<div class="product-card">
-                    <img src="${link}" alt="Camisa ${i+1}">
-                    <h3>Modelo ${i+1}</h3>
-                    <p>Precio: $15 | Gana: $3</p>
-                    <a href="https://wa.me/${num}" class="btn">¡Quiero venderlo!</a>
-                </div>`);
-            });
-        </script>
-    </div>
-
-    <section class="faq">
-        <h2>Información para Vendedoras</h2>
-        <p><b>¿Cómo es la ganancia?</b> Obtienes $3 directos por cada pieza vendida.</p>
-        <p><b>¿Calidad de tela?</b> Usamos tela peruana premium, fresca y de alta durabilidad, ideal para nuestro clima.</p>
-        <p><b>Nota importante:</b> Contamos con inventario rotativo, consulta siempre disponibilidad antes de cerrar tu venta.</p>
-    </section>
+<div class="hero">
+    <h1>URBAN ESSENTIALS</h1>
+    <p>Calidad peruana. Corte Premium. Estilo de vida.</p>
 </div>
+
+<div class="catalog" id="app">
+    <!-- El código generará los productos aquí -->
+</div>
+
+<footer id="contacto">
+    <p>DISTRIBUCIÓN EXCLUSIVA MATURÍN</p>
+    <p>¿LISTO PARA VENDER? CONTÁCTANOS EN WHATSAPP</p>
+</footer>
+
+<script>
+    const num = "584120000000"; // <--- TU NÚMERO AQUÍ
+    const links = [
+        "https://i.postimg.cc/nMqSVr9w/1000812563.jpg", "https://i.postimg.cc/QVcYNCKP/1000812564.jpg",
+        "https://i.postimg.cc/rKcnDT59/1000812565.jpg", "https://i.postimg.cc/JtjY70Hv/1000812566.jpg",
+        "https://i.postimg.cc/HVHZrmb3/1000816265.jpg", "https://i.postimg.cc/Vd1GJwX7/1000816282.jpg",
+        "https://i.postimg.cc/7fDs54St/1000816289.jpg", "https://i.postimg.cc/xcYxXQLx/1000816290.jpg",
+        "https://i.postimg.cc/bs8CZP1B/1000816291.jpg", "https://i.postimg.cc/1fPC8SDT/1000816295.jpg",
+        "https://i.postimg.cc/F7mWYv02/1000816296.jpg", "https://i.postimg.cc/4mZLYGpj/1000816297.jpg",
+        "https://i.postimg.cc/mtRXP47J/1000849619.jpg", "https://i.postimg.cc/1fPC8SpQ/1000849620.jpg",
+        "https://i.postimg.cc/jLKgDTzr/1000849621.jpg", "https://i.postimg.cc/xcYxXQKY/1000849622.jpg"
+    ];
+    
+    const container = document.getElementById('app');
+    links.forEach((link, i) => {
+        container.innerHTML += `
+            <div class="item">
+                <img src="${link}" alt="Camisa">
+                <h3 style="margin-top:20px;">MODELO ${i+1}</h3>
+                <p style="color:#888;">Precio: $15 | Tu comisión: $3</p>
+                <a href="https://wa.me/${num}?text=Hola,%20quiero%20vender%20el%20Modelo%20${i+1}" class="btn">Comenzar Venta</a>
+            </div>
+        `;
+    });
+</script>
 
 </body>
 </html>
